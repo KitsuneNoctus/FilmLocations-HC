@@ -13,6 +13,7 @@
 		3F67812124451F1400DE7328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F67811F24451F1400DE7328 /* Main.storyboard */; };
 		3F67812324451F1A00DE7328 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F67812224451F1A00DE7328 /* Assets.xcassets */; };
 		3F67812624451F1A00DE7328 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F67812424451F1A00DE7328 /* LaunchScreen.storyboard */; };
+		3F67812E2445211C00DE7328 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F67812D2445211C00DE7328 /* locations.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3F67812224451F1A00DE7328 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F67812524451F1A00DE7328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F67812724451F1A00DE7328 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F67812D2445211C00DE7328 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				3F67811924451F1400DE7328 /* AppDelegate.swift */,
 				3F67811B24451F1400DE7328 /* SceneDelegate.swift */,
 				3F67811D24451F1400DE7328 /* ViewController.swift */,
+				3F67812D2445211C00DE7328 /* locations.json */,
 				3F67811F24451F1400DE7328 /* Main.storyboard */,
 				3F67812224451F1A00DE7328 /* Assets.xcassets */,
 				3F67812424451F1A00DE7328 /* LaunchScreen.storyboard */,
@@ -127,6 +130,7 @@
 			files = (
 				3F67812624451F1A00DE7328 /* LaunchScreen.storyboard in Resources */,
 				3F67812324451F1A00DE7328 /* Assets.xcassets in Resources */,
+				3F67812E2445211C00DE7328 /* locations.json in Resources */,
 				3F67812124451F1400DE7328 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
