@@ -17,7 +17,7 @@ class ViewController: UIViewController {
        return table
     }()
     
-    var films:[FilmEntry] = []
+    var films:[FilmEntryCodable] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,32 +40,50 @@ class ViewController: UIViewController {
     func getDataFromFile(_ fileName:String){
         let path = Bundle.main.path(forResource: fileName, ofType: ".json")
         if let path = path {
-          let url = URL(fileURLWithPath: path)
-          print(url)
-            //STuff-----------------
+            let url = URL(fileURLWithPath: path)
             let contents = try? Data(contentsOf: url)
-            do {
-              if let data = contents,
-              let jsonResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String:Any]] {
-                print(jsonResult)
-                for film in jsonResult{
-//                    let firstActor = film["actor_1"] as? String ?? ""
-//                    let locations = film["locations"] as? String  ?? ""
-//                    let releaseYear = film["release_year"] as? String  ?? ""
-//                    let title = film["title"] as? String  ?? ""
-//                    let movie = FilmEntry(firstActor: film["actor_1"], locations: film["locations"], releaseYear: film["release_year"], title: film["title"])
-                    guard let film = FilmEntry(json: film) else { continue }
-                    films.append(film)
+            if let data = contents{
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                do {
+                    let filmsFromJSON = try decoder.decode([FilmEntryCodable].self, from: data)
+                    films = filmsFromJSON
+                    table.reloadData()
+                } catch {
+                    print("Parsing Failed")
                 }
-                table.reloadData()
-              }
-            } catch {
-              print("Error deserializing JSON: \(error)")
             }
-            
         }
-        
     }
+//    func getDataFromFile(_ fileName:String){
+//        let path = Bundle.main.path(forResource: fileName, ofType: ".json")
+//        if let path = path {
+//          let url = URL(fileURLWithPath: path)
+//          print(url)
+//            //STuff-----------------
+//            let contents = try? Data(contentsOf: url)
+//            do {
+//              if let data = contents,
+//              let jsonResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String:Any]] {
+//                print(jsonResult)
+//                for film in jsonResult{
+////                    let firstActor = film["actor_1"] as? String ?? ""
+////                    let locations = film["locations"] as? String  ?? ""
+////                    let releaseYear = film["release_year"] as? String  ?? ""
+////                    let title = film["title"] as? String  ?? ""
+////                    let movie = FilmEntry(firstActor: film["actor_1"], locations: film["locations"], releaseYear: film["release_year"], title: film["title"])
+//                    guard let film = FilmEntry(json: film) else { continue }
+//                    films.append(film)
+//                }
+//                table.reloadData()
+//              }
+//            } catch {
+//              print("Error deserializing JSON: \(error)")
+//            }
+//
+//        }
+//
+//    }
 
 
 }

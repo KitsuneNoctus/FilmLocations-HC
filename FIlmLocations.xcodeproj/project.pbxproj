@@ -16,6 +16,7 @@
 		3F67812E2445211C00DE7328 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F67812D2445211C00DE7328 /* locations.json */; };
 		3F6781302445253600DE7328 /* FIlmEnrty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67812F2445253600DE7328 /* FIlmEnrty.swift */; };
 		3F6781322445281F00DE7328 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6781312445281F00DE7328 /* TableCell.swift */; };
+		3F67813424453EAD00DE7328 /* FilmEntryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67813324453EAD00DE7328 /* FilmEntryCodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3F67812D2445211C00DE7328 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 		3F67812F2445253600DE7328 /* FIlmEnrty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIlmEnrty.swift; sourceTree = "<group>"; };
 		3F6781312445281F00DE7328 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		3F67813324453EAD00DE7328 /* FilmEntryCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmEntryCodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				3F67811924451F1400DE7328 /* AppDelegate.swift */,
 				3F67811B24451F1400DE7328 /* SceneDelegate.swift */,
 				3F67811D24451F1400DE7328 /* ViewController.swift */,
+				3F67813324453EAD00DE7328 /* FilmEntryCodable.swift */,
 				3F6781312445281F00DE7328 /* TableCell.swift */,
 				3F67812F2445253600DE7328 /* FIlmEnrty.swift */,
 				3F67812D2445211C00DE7328 /* locations.json */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F6781322445281F00DE7328 /* TableCell.swift in Sources */,
+				3F67813424453EAD00DE7328 /* FilmEntryCodable.swift in Sources */,
 				3F6781302445253600DE7328 /* FIlmEnrty.swift in Sources */,
 				3F67811E24451F1400DE7328 /* ViewController.swift in Sources */,
 				3F67811A24451F1400DE7328 /* AppDelegate.swift in Sources */,
