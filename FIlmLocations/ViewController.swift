@@ -95,7 +95,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableCell.identifier, for: indexPath) as! TableCell
-        cell.textLabel?.text = films[indexPath.row].locations
+        cell.textLabel?.text = "\(films[indexPath.row].locations)  \(films[indexPath.row].releaseYear.value)"
+//        cell.textLabel?.text = films[indexPath.row].locations
 
         return cell
     }
